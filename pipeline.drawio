@@ -1,0 +1,67 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjutI2lmNuAiZWWbUeT2" name="Page-1">
+        <mxGraphModel dx="919" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-11" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-1" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-8" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-12" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-1" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-8" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="AGROS raw data" vertex="1">
+                    <mxGeometry height="80" width="120" x="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-3" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-8" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" target="zPD4HX_3VDmASApWIs5N-1" value="REST API">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="282.5" y="160" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-5" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-8" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-4" value="Serialize">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="317.5" y="230" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-7" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-4" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-9" value="Deserialize">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="442.5" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Stored data (local files, database, whatever)" vertex="1">
+                    <mxGeometry height="80" width="120" x="160" y="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Python data fetcher" vertex="1">
+                    <mxGeometry height="80" width="120" x="160" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-13" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-9" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" target="zPD4HX_3VDmASApWIs5N-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-15" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-9" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-14" value="Translate">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-18" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-9" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-16" value="Translate">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-19" edge="1" parent="1" source="zPD4HX_3VDmASApWIs5N-9" style="edgeStyle=none;html=1;" target="zPD4HX_3VDmASApWIs5N-17" value="Translate">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Python analyzer" vertex="1">
+                    <mxGeometry height="80" width="120" x="160" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Runtime deserialized dict with data" vertex="1">
+                    <mxGeometry height="80" width="120" x="320" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SUMO Data" vertex="1">
+                    <mxGeometry height="80" width="120" y="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="O/D matrix analytical data" vertex="1">
+                    <mxGeometry height="80" width="120" x="160" y="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="zPD4HX_3VDmASApWIs5N-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="(any other translation of the data)" vertex="1">
+                    <mxGeometry height="80" width="120" x="320" y="640" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
