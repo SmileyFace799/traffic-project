@@ -1,0 +1,710 @@
+{
+  "schema_version": "1.0",
+  "aggregation_interval_minutes": 15,
+  "obfuscation_threshold": 3,
+  "obfuscation_method": "null_below_threshold",
+  "measurements": [
+    {
+      "measurement_id": "mock-measurement-001",
+      "start_time": "2026-10-05T07:00:00Z",
+      "end_time": "2026-10-05T09:00:00Z",
+      "site": {
+        "site_id": "mock-site-001",
+        "name": "Simulated Central Intersection",
+        "location": {
+          "lat": 63.430515,
+          "lon": 10.395060
+        },
+        "portlines": [
+          {
+            "name": "north_in",
+            "start": {
+              "x": 0.45,
+              "y": 0.00
+            },
+            "end": {
+              "x": 0.55,
+              "y": 0.25
+            }
+          },
+          {
+            "name": "south_in",
+            "start": {
+              "x": 0.45,
+              "y": 1.00
+            },
+            "end": {
+              "x": 0.55,
+              "y": 0.75
+            }
+          },
+          {
+            "name": "east_in",
+            "start": {
+              "x": 1.00,
+              "y": 0.45
+            },
+            "end": {
+              "x": 0.75,
+              "y": 0.55
+            }
+          },
+          {
+            "name": "west_in",
+            "start": {
+              "x": 0.00,
+              "y": 0.45
+            },
+            "end": {
+              "x": 0.25,
+              "y": 0.55
+            }
+          },
+          {
+            "name": "north_out",
+            "start": {
+              "x": 0.45,
+              "y": 0.25
+            },
+            "end": {
+              "x": 0.55,
+              "y": 0.00
+            }
+          },
+          {
+            "name": "south_out",
+            "start": {
+              "x": 0.45,
+              "y": 0.75
+            },
+            "end": {
+              "x": 0.55,
+              "y": 1.00
+            }
+          },
+          {
+            "name": "east_out",
+            "start": {
+              "x": 0.75,
+              "y": 0.45
+            },
+            "end": {
+              "x": 1.00,
+              "y": 0.55
+            }
+          },
+          {
+            "name": "west_out",
+            "start": {
+              "x": 0.25,
+              "y": 0.55
+            },
+            "end": {
+              "x": 0.00,
+              "y": 0.45
+            }
+          }
+        ],
+        "pedestrian_polygons": []
+      },
+      "results": {
+        "interval_start": "2026-10-05T07:00:00Z",
+        "interval_end": "2026-10-05T09:00:00Z",
+        "data": [
+          {
+            "interval_start": "2026-10-05T07:00:00Z",
+            "interval_end": "2026-10-05T07:15:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 42,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "east_out": {
+                  "car": 18,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "west_out": {
+                  "car": 11,
+                  "truck": null,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 38,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "east_out": {
+                  "car": 16,
+                  "truck": 3,
+                  "motorcycle": null
+                },
+                "west_out": {
+                  "car": 21,
+                  "truck": 4,
+                  "motorcycle": 3
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 14,
+                  "truck": null,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 27,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 31,
+                  "truck": 4,
+                  "motorcycle": null
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 12,
+                  "truck": 3,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 25,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "east_out": {
+                  "car": 36,
+                  "truck": 6,
+                  "motorcycle": 4
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T07:15:00Z",
+            "interval_end": "2026-10-05T07:30:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 48,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "east_out": {
+                  "car": 23,
+                  "truck": 4,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 15,
+                  "truck": null,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 45,
+                  "truck": 7,
+                  "motorcycle": 5
+                },
+                "east_out": {
+                  "car": 19,
+                  "truck": 3,
+                  "motorcycle": null
+                },
+                "west_out": {
+                  "car": 24,
+                  "truck": 5,
+                  "motorcycle": 3
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 17,
+                  "truck": null,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 32,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 37,
+                  "truck": 5,
+                  "motorcycle": null
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 15,
+                  "truck": 3,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 31,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "east_out": {
+                  "car": 43,
+                  "truck": 7,
+                  "motorcycle": 5
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T07:30:00Z",
+            "interval_end": "2026-10-05T07:45:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 56,
+                  "truck": 7,
+                  "motorcycle": 5
+                },
+                "east_out": {
+                  "car": 28,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 19,
+                  "truck": null,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 52,
+                  "truck": 8,
+                  "motorcycle": 6
+                },
+                "east_out": {
+                  "car": 22,
+                  "truck": 4,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 29,
+                  "truck": 5,
+                  "motorcycle": 4
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 21,
+                  "truck": 3,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 39,
+                  "truck": 7,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 44,
+                  "truck": 6,
+                  "motorcycle": 3
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 18,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 37,
+                  "truck": 7,
+                  "motorcycle": 4
+                },
+                "east_out": {
+                  "car": 51,
+                  "truck": 8,
+                  "motorcycle": 6
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T07:45:00Z",
+            "interval_end": "2026-10-05T08:00:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 61,
+                  "truck": 8,
+                  "motorcycle": 6
+                },
+                "east_out": {
+                  "car": 31,
+                  "truck": 5,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 22,
+                  "truck": 3,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 58,
+                  "truck": 9,
+                  "motorcycle": 7
+                },
+                "east_out": {
+                  "car": 26,
+                  "truck": 4,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 33,
+                  "truck": 6,
+                  "motorcycle": 4
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 23,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 44,
+                  "truck": 8,
+                  "motorcycle": 5
+                },
+                "west_out": {
+                  "car": 49,
+                  "truck": 7,
+                  "motorcycle": 4
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 21,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 43,
+                  "truck": 8,
+                  "motorcycle": 5
+                },
+                "east_out": {
+                  "car": 57,
+                  "truck": 9,
+                  "motorcycle": 7
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T08:00:00Z",
+            "interval_end": "2026-10-05T08:15:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 68,
+                  "truck": 9,
+                  "motorcycle": 7
+                },
+                "east_out": {
+                  "car": 34,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 25,
+                  "truck": 3,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 65,
+                  "truck": 10,
+                  "motorcycle": 8
+                },
+                "east_out": {
+                  "car": 29,
+                  "truck": 5,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 37,
+                  "truck": 7,
+                  "motorcycle": 5
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 26,
+                  "truck": 4,
+                  "motorcycle": 3
+                },
+                "south_out": {
+                  "car": 49,
+                  "truck": 9,
+                  "motorcycle": 6
+                },
+                "west_out": {
+                  "car": 54,
+                  "truck": 8,
+                  "motorcycle": 5
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 24,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 48,
+                  "truck": 9,
+                  "motorcycle": 6
+                },
+                "east_out": {
+                  "car": 63,
+                  "truck": 10,
+                  "motorcycle": 8
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T08:15:00Z",
+            "interval_end": "2026-10-05T08:30:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 72,
+                  "truck": 10,
+                  "motorcycle": 8
+                },
+                "east_out": {
+                  "car": 37,
+                  "truck": 6,
+                  "motorcycle": 5
+                },
+                "west_out": {
+                  "car": 27,
+                  "truck": 3,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 70,
+                  "truck": 11,
+                  "motorcycle": 9
+                },
+                "east_out": {
+                  "car": 31,
+                  "truck": 5,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 41,
+                  "truck": 8,
+                  "motorcycle": 5
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 29,
+                  "truck": 4,
+                  "motorcycle": 3
+                },
+                "south_out": {
+                  "car": 53,
+                  "truck": 10,
+                  "motorcycle": 7
+                },
+                "west_out": {
+                  "car": 59,
+                  "truck": 9,
+                  "motorcycle": 5
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 27,
+                  "truck": 5,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 52,
+                  "truck": 10,
+                  "motorcycle": 7
+                },
+                "east_out": {
+                  "car": 68,
+                  "truck": 11,
+                  "motorcycle": 9
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T08:30:00Z",
+            "interval_end": "2026-10-05T08:45:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 69,
+                  "truck": 9,
+                  "motorcycle": 7
+                },
+                "east_out": {
+                  "car": 35,
+                  "truck": 6,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 26,
+                  "truck": 3,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 67,
+                  "truck": 10,
+                  "motorcycle": 8
+                },
+                "east_out": {
+                  "car": 30,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 39,
+                  "truck": 7,
+                  "motorcycle": 5
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 27,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 51,
+                  "truck": 9,
+                  "motorcycle": 6
+                },
+                "west_out": {
+                  "car": 57,
+                  "truck": 8,
+                  "motorcycle": 5
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 26,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 50,
+                  "truck": 9,
+                  "motorcycle": 6
+                },
+                "east_out": {
+                  "car": 65,
+                  "truck": 10,
+                  "motorcycle": 8
+                }
+              }
+            }
+          },
+          {
+            "interval_start": "2026-10-05T08:45:00Z",
+            "interval_end": "2026-10-05T09:00:00Z",
+            "counts": {
+              "north_in": {
+                "south_out": {
+                  "car": 63,
+                  "truck": 8,
+                  "motorcycle": 6
+                },
+                "east_out": {
+                  "car": 32,
+                  "truck": 5,
+                  "motorcycle": 4
+                },
+                "west_out": {
+                  "car": 23,
+                  "truck": 3,
+                  "motorcycle": null
+                }
+              },
+              "south_in": {
+                "north_out": {
+                  "car": 61,
+                  "truck": 9,
+                  "motorcycle": 7
+                },
+                "east_out": {
+                  "car": 28,
+                  "truck": 5,
+                  "motorcycle": 3
+                },
+                "west_out": {
+                  "car": 36,
+                  "truck": 7,
+                  "motorcycle": 4
+                }
+              },
+              "east_in": {
+                "north_out": {
+                  "car": 24,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 46,
+                  "truck": 8,
+                  "motorcycle": 5
+                },
+                "west_out": {
+                  "car": 52,
+                  "truck": 7,
+                  "motorcycle": 4
+                }
+              },
+              "west_in": {
+                "north_out": {
+                  "car": 23,
+                  "truck": 4,
+                  "motorcycle": null
+                },
+                "south_out": {
+                  "car": 45,
+                  "truck": 8,
+                  "motorcycle": 5
+                },
+                "east_out": {
+                  "car": 60,
+                  "truck": 9,
+                  "motorcycle": 7
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
