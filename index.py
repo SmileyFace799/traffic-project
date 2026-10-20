@@ -1,73 +1,91 @@
-import json
 import numpy as np
+from typing import Literal
+from data_io import *
+
+# Changge what to load
+data_paths : tuple[str, ...] = ("mock_data/15/*",)
+exclude_measurements : dict[str, tuple[int, ...]] = {
+    "mock_data/15/measurement_001.json": (0,)
+}
+vehicle_type : VehicleType = "car"
+
+# Load selected datasets, get global info
+datasets = load_datasets(data_paths)
 
 
-with open("mock_data/15/measurement_001.json") as f:
-    data = json.load(f)
+for name, dataset in datasets.items():
+    obfuscation_threshold = dataset["obfuscation_threshold"]
+    for measurement in dataset["measurements"]:
+        in_indexes: list[PortlineNameIn] = []
+        out_indexes: list[PortlineNameOut] = []
 
-obfuscation_threshold = data["obfuscation_threshold"]
+        od_dict : dict[PortlineNameIn, dict[PortlineNameOut, int | None]] = {}
 
-# First measurement
-measurement = data["measurements"][0]
+        for interval in measurement["results"]["data"]:
+            counts = interval["counts"]
 
-# First 15-minute interval
-interval = measurement["results"]["data"][0]
-counts = interval["counts"]
+            # Get origins and destinations
+            for k_in in counts.keys():
+                if k_in not in in_indexes:
+                    in_indexes.append(k_in)
+                    od_dict[k_in] = {}
 
+                for k_out in counts[k_in]:
+                    if k_out not in out_indexes:
+                        out_indexes.append(k_out)
+                    if k_out not in od_dict[k_in].keys():
+                        od_dict[k_in][k_out] = 0
 
-# Get origins and destinations
-in_indexes = list(counts.keys())
+                    count = counts[k_in][k_out][vehicle_type]
+                    if count is None:
+                        od_dict[k_in][k_out] = None
+                    elif (v := od_dict[k_in][k_out]) is not None: # Variable assignment to satisfy type checker
+                        od_dict[k_in][k_out] = v + count
 
-out_indexes = sorted({
-    port_out
-    for out_counts in counts.values()
-    for port_out in out_counts
-})
+        in_indexes.sort()
+        out_indexes.sort()
 
+        # Create OD matrix
+        od_matrix = np.full(
+            (len(in_indexes), len(out_indexes)),
+            None,
+            dtype=object
+        )
 
-# Create OD matrix
-od_matrix = np.full(
-    (len(in_indexes), len(out_indexes)),
-    None,
-    dtype=object
-)
+        # Fill matrix with car counts
+        for i, k_in in enumerate(in_indexes):
+            for j, k_out in enumerate(out_indexes):
 
+                # No entry for this origin/destination pair
+                if k_out not in od_dict[k_in]:
+                    od_matrix[i, j] = 0
+                    continue
 
-# Fill matrix with car counts
-for i, port_in in enumerate(in_indexes):
-    for j, port_out in enumerate(out_indexes):
+                # Get car count
+                od_matrix[i, j] = od_dict[k_in][k_out]
 
-        # No entry for this origin/destination pair
-        if port_out not in counts[port_in]:
-            od_matrix[i, j] = 0
-            continue
+        # Print matrix
+        print("Car OD matrix")
+        print()
 
-        # Get car count
-        od_matrix[i, j] = counts[port_in][port_out]["car"]
+        # Header
+        print(f"{'Origin':12}", end="")
+        for port_out in out_indexes:
+            print(f"{port_out:>12}", end="")
+        print()
 
+        # Rows
+        for i, port_in in enumerate(in_indexes):
+            print(f"{port_in:12}", end="")
 
-# Print matrix
-print("Car OD matrix")
-print()
+            for j in range(len(out_indexes)):
+                value = od_matrix[i, j]
 
-# Header
-print(f"{'Origin':12}", end="")
-for port_out in out_indexes:
-    print(f"{port_out:>12}", end="")
-print()
+                if value is None:
+                    display = "NULL"
+                else:
+                    display = str(value)
 
-# Rows
-for i, port_in in enumerate(in_indexes):
-    print(f"{port_in:12}", end="")
+                print(f"{display:>12}", end="")
 
-    for j in range(len(out_indexes)):
-        value = od_matrix[i, j]
-
-        if value is None:
-            display = "NULL"
-        else:
-            display = str(value)
-
-        print(f"{display:>12}", end="")
-
-    print()
+            print()
